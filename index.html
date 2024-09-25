@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop-down Menu description</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-bar">
+      <ul>
+        <li class="-active">
+          <a href="#"><i class="fa fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-user"></i>About Us</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="">Mission</a></li>
+              <li><a href="">Vision</a></li>
+              <li><a href="">Team</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-clone"></i>Services</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="">Web Designing</a></li>
+              <li class="hover-me">
+                <a href="">Marketing</a><i class="fa fa-angle-right"></i>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li><a href="">SEO</a></li>
+                    <li><a href="">Social Marketing</a></li>
+                    <li><a href="">Email Marketing</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="hover-me">
+                <a href="">Mobile App</a><i class="fa fa-angle-right"></i>
+                <div class="sub-menu-2">
+                  <ul>
+                    <li><a href="">Android App</a></li>
+                    <li><a href="">iOS App</a></li>
+                    <li><a href="">Ionic App</a></li>
+                    <li><a href="">Flutter App</a></li>
+                    <li><a href="">Unity App</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-users"></i>Clients</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-angellist"></i>Investors</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-inr"></i>Pricing</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-edit"></i>Training</a>
+        </li>
+        <li>
+          <a href="https://github.com/savvydarknight"
+            ><i class="fa fa-phone"></i>Contact</a
+          >
+        </li>
+      </ul>
+      <div class="btn">
+        <span class="fas fa-bars"></span>
+      </div>
+    </div>
+    <nav class="sidebar">
+      <ul>
+        <li class="active">
+          <a href="#"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="#" class="about-btn"
+            ><i class="fa fa-user"></i>About Us
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="about-show">
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Team</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="services-btn"
+            ><i class="fa fa-clone"></i>Services
+            <span class="fas fa-caret-down second"></span>
+          </a>
+          <ul class="services-show">
+            <li><a href="#">Web Designing</a></li>
+            <li>
+              <a href="#" class="marketing-btn"
+                >Marketing <span class="fas fa-caret-down marketing-fas"></span
+              ></a>
+              <ul class="marketing-show">
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Social Marketing</a></li>
+                <li><a href="#">Email Marketing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="mobile-app-btn"
+                >Mobile App
+                <span class="fas fa-caret-down mobile-app-fas"></span
+              ></a>
+              <ul class="mobile-app-show">
+                <li><a href="#">Android App</a></li>
+                <li><a href="#">iOS App</a></li>
+                <li><a href="#">Iconic App</a></li>
+                <li><a href="#">Flutter App</a></li>
+                <li><a href="#">Unity App</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-users"></i>Clients</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-angellist"></i>Investors</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-inr"></i>Pricing</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-edit"></i>Training</a>
+        </li>
+        <li>
+          <a href="https://github.com/savvydarknight" target="_blank"
+            ><i class="fas fa-phone"></i>Contact</a
+          >
+        </li>
+        <div class="copyright">
+          <h6 class="rights">2024 All Rights Reserved</h6>
+
+          <h6 class="adityan">
+            <a href="https://instagram.com/gr_cictehro">Adityan Karan</a>
+          </h6>
+        </div>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="header">
+        Header & Sidebar Dropdown Using HTML CSS & JavaScript
+      </div>
+    </div>
+    <script>
+      $(".btn").click(function () {
+        $(this).toggleClass("click");
+        $(".sidebar").toggleClass("show");
+      });
+      $(".about-btn").click(function () {
+        $("nav ul .about-show").toggleClass("show");
+        $("nav ul .first").toggleClass("rotate");
+      });
+      $(".services-btn").click(function () {
+        $("nav ul .services-show").toggleClass("show1");
+        $("nav ul .second").toggleClass("rotate");
+      });
+      $(".marketing-btn").click(function () {
+        $(".marketing-show").toggleClass("m-show");
+        $(".marketing-fas").toggleClass("rotate");
+      });
+      $(".mobile-app-btn").click(function () {
+        $(".mobile-app-show").toggleClass("m-a-show");
+        $(".mobile-app-fas").toggleClass("rotate");
+      });
+      $("nav ul li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  </body>
+</html>
